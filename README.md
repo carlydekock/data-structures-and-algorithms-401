@@ -2,3 +2,4 @@
 
 ## Table of Contents
 - [array-reverse](challenges/arrayReverse/array-reverse.js)
+- [array-shift](challenges/arrayShift/array-shift.js)
