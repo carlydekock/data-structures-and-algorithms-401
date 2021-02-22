@@ -67,4 +67,64 @@ describe('testing functionality of linked list and node instantiations', () => {
     const testString = list.toString();
     expect(testString).toEqual('{0} -> {1} -> {2} -> {3} -> {null}');
   });
+
+  it('should add a new node with the given value to the end of the list', () => {
+    const list = new linkedList.list();
+    list.head = new linkedList.node(0);
+    // list.head.next = new linkedList.node(1);
+    list.append(4);
+    // let testAppend = list.append(4);
+
+    // console.log(testAppend.next.value);
+    expect(list.head.next.value).toEqual(4);
+  });
+
+  it('should add multiple nodes to the end of the list', () => {
+    const list = new linkedList.list();
+    list.head = new linkedList.node(0);
+    list.append(2);
+    list.append(4);
+
+    expect(list.head.next.value).toEqual(2);
+    expect(list.head.next.next.value).toEqual(4);
+  });
+
+
+  it('should add a new node with the given new value immediately before the first value node', () => {
+    const list = new linkedList.list();
+    list.head = new linkedList.node(0);
+    list.head.next = new linkedList.node(1);
+    list.insertBefore(1, 4);
+
+    expect(list.head.next.value).toEqual(4);
+  });
+
+  it('should add a new node with the given new value immediately before the first node', () => {
+    const list = new linkedList.list();
+    list.head = new linkedList.node(0);
+    list.head.next = new linkedList.node(1);
+    list.insertBefore(0, 4);
+    console.log(list);
+    expect(list.head.value).toEqual(4);
+  });
+
+  it('should add a new node with the given new value after the first value node', () => {
+    const list = new linkedList.list();
+    list.head = new linkedList.node(0);
+    list.head.next = new linkedList.node(1);
+    list.head.next.next = new linkedList.node(2);
+    list.insertAfter(1, 4);
+
+    expect(list.head.next.next.value).toEqual(4);
+  });
+
+  it('should add a new node with the given new value after the last node', () => {
+    const list = new linkedList.list();
+    list.head = new linkedList.node(0);
+    list.head.next = new linkedList.node(1);
+    list.head.next.next = new linkedList.node(2);
+    list.insertAfter(2, 4);
+
+    expect(list.head.next.next.next.value).toEqual(4);
+  });
 });

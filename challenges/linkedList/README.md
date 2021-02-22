@@ -10,12 +10,18 @@ Creating methods for singly linked lists.
 - Define a method called insert, which takes any value as an argument and adds a new node with that value to the head of the list.
 - Define a method called includes which takes any value as an argument and returns a boolean result depending on whether that value exists as a node’s value somewhere within the list.
 - Define a method called toString which takes in no arguments and returns a string representing all the values in the linked list formatted as: "{ a } -> { b } -> { c } -> NULL"
+- Define a new method append which takes in a value which adds a new node with the given value to the end of the list
+- Define a new method insertBefore which takes in a value and a newVal and adds a new node with the given newValue immediately before the first value node
+- Define a new method insertAfter which takes in a value and a newVal and adds a new node with the given newValue immediately after the first value node
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 - Insert: space O(1)/time O(1)
 - Includes: space O(n)/time O(n)
 - toString: space O(n)/time O(n)
+- Append: space O(n)/time O(n)
+- insertBefore: space 0(1)/time O(1)
+- insertAfter: space 0(1)/time O(1)
 
 ## Resources and Collaborators
 
