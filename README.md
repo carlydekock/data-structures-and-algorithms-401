@@ -7,3 +7,4 @@
 - [array-binary-search](challenges/arrayBinarySearch/array-binary-search.js)
 - [linked-list](challenges/linkedList/linked-list.js)
 - [ll-zip](challenges/llZip/ll-zip.js)
+- [stacks-and-queues](challenges/stacksAndQueues/stacks-and-queues.js)
