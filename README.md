@@ -8,4 +8,4 @@
 - [linked-list](challenges/linkedList/linked-list.js)
 - [ll-zip](challenges/llZip/ll-zip.js)
 - [stacks-and-queues](challenges/stacksAndQueues/stacks-and-queues.js)
-- [queues-with-stacks](challenges/queuesAndStacks/queues-with-stacks.js)
+- [queues-with-stacks](challenges/queueAndStacks/queues-with-stacks.js)
