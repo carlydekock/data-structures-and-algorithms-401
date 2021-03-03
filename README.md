@@ -9,3 +9,4 @@
 - [ll-zip](challenges/llZip/ll-zip.js)
 - [stacks-and-queues](challenges/stacksAndQueues/stacks-and-queues.js)
 - [queues-with-stacks](challenges/queueAndStacks/queues-with-stacks.js)
+- [fifo-animal-shelter](challenges/fifoAnimalShelter/fifo-animal-shelter.js)
