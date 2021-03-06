@@ -11,3 +11,4 @@
 - [queues-with-stacks](challenges/queueAndStacks/queues-with-stacks.js)
 - [fifo-animal-shelter](challenges/fifoAnimalShelter/fifo-animal-shelter.js)
 - [multi-bracket-validation](challenges/multiBracketValidation/multi-bracket-validation.js)
+- [trees](challenges/tree/tree.js)
