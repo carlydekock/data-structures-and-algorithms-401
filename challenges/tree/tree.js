@@ -108,7 +108,6 @@ class Tree {
   }
 
   
-
   traverseWithStack() {
     let current = this.root;
     let stack = [];
@@ -150,6 +149,36 @@ class Tree {
       }
     }
   }
+
+  findMaximumValue () {
+    let current = this.root;
+    // console.log('current', current);
+    if (!current) {
+      throw 'no nodes in tree';
+    }
+
+    const findMax = (node) => {
+      //traverse the tree
+      //find max value to the left
+      //find max value to the right
+      if (node === null){
+        return;
+      }
+      let max = node.value;
+      let leftMax = findMax(node.left);
+      let rightMax = findMax(node.right);
+
+      if(leftMax > max){
+        max = leftMax;
+      }
+      if(rightMax > max){
+        max = rightMax;
+      }
+      return max;
+    };
+    return findMax(current);
+  }
+
 }
 
 class BinarySearchTree {
@@ -223,7 +252,7 @@ tree.root.left.right = new Node(20);
 tree.root.right = new Node(15);
 tree.root.right.right = new Node(25);
 
-// console.log(tree.preOrder());
+console.log(tree.findMaximumValue());
 // console.log(tree.inOrder());
 // console.log(tree.postOrder());
 
