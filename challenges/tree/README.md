@@ -12,6 +12,7 @@ Binary tree and binary search tree methods and implementation.
   - Define a method named add that accepts a value, and adds a new node with that value in the correct location in the binary search tree.
   - Define a method named contains that accepts a value, and returns a boolean indicating whether or not the value is in the tree at least once.
 - Extend BinaryTree class, write an instance method called find-maximum-value which returns the maximum value stored in the tree.
+- Write a breadth first traversal method which takes a Binary Tree as its unique input. Without utilizing any of the built-in methods available to your language, traverse the input tree using a Breadth-first approach, and return a list of the values in the tree in the order they were encountered.
 
 ## Approach & Efficiency
 
@@ -21,7 +22,8 @@ Binary tree and binary search tree methods and implementation.
 - PostOrder traversal: O(n) space/ O(n) time
 - Adding new node: O(1) space/ O(h) time
 - Searching for a value (contains): O(1) space/ O(h) time
-- Find max value: O(1) space, O(n) time
+- Find max value: O(1) space/ O(n) time
+- Breadth first traversal: O(n^2) space/ O(n^2) time
 
 ## Resources and Collaborators
 
@@ -29,9 +31,12 @@ Binary tree and binary search tree methods and implementation.
 - Code Fellows docs on [trees](https://codefellows.github.io/common_curriculum/data_structures_and_algorithms/Code_401/class-15/resources/Trees.html)
 - [Medium article](https://medium.com/swlh/binary-search-tree-in-javascript-31cb74d8263b)
 - Geeks for Geeks finding maximum value [article](https://www.geeksforgeeks.org/find-maximum-or-minimum-in-binary-tree/)
+- [stack overflow](https://stackoverflow.com/questions/21194678/recursive-breadth-first-traversal-of-binary-tree) for breadth first traversal
+- [stack overflow](https://stackoverflow.com/questions/10865025/merge-flatten-an-array-of-arrays), [JSTips](https://www.jstips.co/en/javascript/flattening-multidimensional-arrays-in-javascript/), and [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat) for flattening a multi-dimensional array
 
 ## Whiteboard
 
 ![image1](/assets/trees.png)
 ![image2](/assets/trees2.png)
 ![image3](/assets/trees3.png)
+![image4](/assets/trees4.png)
