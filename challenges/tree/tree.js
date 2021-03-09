@@ -179,6 +179,38 @@ class Tree {
     return findMax(current);
   }
 
+
+  breadthFirstTraversal() {
+    let levels = [];
+    let traverse = (current, depth) => {
+      if (!current) {
+        return null;
+      } 
+      if (!levels[depth]) {
+        levels[depth] = [current.value];
+      } else {
+        levels[depth].push(current.value);
+      }
+      traverse(current.left, depth + 1);
+      traverse(current.right, depth + 1);
+    };
+    traverse(this.root, 0);
+    // let newArray = Array.prototype.concat.apply([], levels);
+    // return newArray;  
+    // return levels;
+    let flattenArray = (array, result = []) => {
+      for (let i = 0; i < array.length; i++) {
+        let value = array[i];
+        if(Array.isArray(value)) {
+          flattenArray(value, result);
+        } else {
+          result[result.length] = value;
+        }
+      }
+      return result;
+    };
+    return flattenArray(levels);
+  }
 }
 
 class BinarySearchTree {
@@ -252,7 +284,7 @@ tree.root.left.right = new Node(20);
 tree.root.right = new Node(15);
 tree.root.right.right = new Node(25);
 
-console.log(tree.findMaximumValue());
+console.log(tree.breadthFirstTraversal());
 // console.log(tree.inOrder());
 // console.log(tree.postOrder());
 
