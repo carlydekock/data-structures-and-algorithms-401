@@ -38,54 +38,6 @@ class KaryTree {
   }
 }
 
-// function fizzBuzzTree(tree) {
-//   let newTree = new KaryTree(tree.k);
-//   newTree.root = new KaryNode(tree.root.value, tree.k);
-//   console.log('this is new tree', newTree);
-//   let current = tree.root;
-//   let currentTwo = newTree.root;
-
-//   let queue = [];
-//   let queueTwo = [];
-//   let array = [];
-//   // let newValues = [];
-
-//   // queue.unshift(this.root);
-//   queue.unshift(current);
-//   queueTwo.unshift(currentTwo);
-
-//   while (queue.length) {
-
-//     current = queue.pop();
-//     currentTwo = queueTwo.pop();
-//     // console.log('this is current value', current.value);
-//     array.push(current.value);
-
-//     if(current.value % 15 === 0){
-//       currentTwo.value('FizzBuzz');
-//     } else if(current.value % 5 === 0){
-//       currentTwo.value('Buzz');
-//     } else if(current.value % 3 === 0){
-//       currentTwo.value('Fizz');
-//     } else {
-//       currentTwo.value(current.value.toString());
-//     }
-    
-//     //have value here - conditional logic for fizz/buzz
-//     for (let i = 0; i < current.children.length; i++) {
-//       if (current.children[i]) {
-//         currentTwo.children[i] = new KaryNode(i, karyTree.k);
-//         queue.unshift(current.children[i]);
-//         queueTwo.unshift(currentTwo.children[i]);
-//       }
-//     }
-//   }
-//   // console.log(array);
-//   return newTree;
-
-// }
-
-
 
 // Trees
 class Node {
