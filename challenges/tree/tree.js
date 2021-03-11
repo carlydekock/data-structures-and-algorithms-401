@@ -1,40 +1,91 @@
 'use strict';
 
 //Kary trees
-// class KaryNode {
-//   constructor(value, size) {
-//     this.value = value;
-//     this.children = new Array(size); 
-//   }
-// }
+class KaryNode {
+  constructor(value, size) {
+    this.value = value;
+    this.children = new Array(size); 
+  }
+}
 
-// class KaryTree {
-//   constructor(k) {
-//     this.root = null;
-//     this.k = k;
-//   }
+class KaryTree {
+  constructor(k) {
+    this.root = null;
+    this.k = k;
+  }
 
-//   breadth() {
+  breadth() {
 
-//     let current = null;
-//     let queue = [];
+    let current = null;
+    let queue = [];
+    let array = [];
 
-//     queue.unshift(this.root);
+    queue.unshift(this.root);
 
-//     while (queue.length) {
+    while (queue.length) {
 
-//       current = queue.pop();
-//       console.log(current.value);
+      current = queue.pop();
+      // console.log('this is current value', current.value);
+      array.push(current.value);
 
-//       for (let i = 0; i < current.children.length; i++) {
-//         if (current.children[i]) {
-//           queue.unshift(current.children[i]);
-//         }
+      for (let i = 0; i < current.children.length; i++) {
+        if (current.children[i]) {
+          queue.unshift(current.children[i]);
+        }
+      }
+    }
+    return array;
+  }
+}
+
+// function fizzBuzzTree(tree) {
+//   let newTree = new KaryTree(tree.k);
+//   newTree.root = new KaryNode(tree.root.value, tree.k);
+//   console.log('this is new tree', newTree);
+//   let current = tree.root;
+//   let currentTwo = newTree.root;
+
+//   let queue = [];
+//   let queueTwo = [];
+//   let array = [];
+//   // let newValues = [];
+
+//   // queue.unshift(this.root);
+//   queue.unshift(current);
+//   queueTwo.unshift(currentTwo);
+
+//   while (queue.length) {
+
+//     current = queue.pop();
+//     currentTwo = queueTwo.pop();
+//     // console.log('this is current value', current.value);
+//     array.push(current.value);
+
+//     if(current.value % 15 === 0){
+//       currentTwo.value('FizzBuzz');
+//     } else if(current.value % 5 === 0){
+//       currentTwo.value('Buzz');
+//     } else if(current.value % 3 === 0){
+//       currentTwo.value('Fizz');
+//     } else {
+//       currentTwo.value(current.value.toString());
+//     }
+    
+//     //have value here - conditional logic for fizz/buzz
+//     for (let i = 0; i < current.children.length; i++) {
+//       if (current.children[i]) {
+//         currentTwo.children[i] = new KaryNode(i, karyTree.k);
+//         queue.unshift(current.children[i]);
+//         queueTwo.unshift(currentTwo.children[i]);
 //       }
 //     }
-
 //   }
+//   // console.log(array);
+//   return newTree;
+
 // }
+
+
 
 // Trees
 class Node {
@@ -133,12 +184,13 @@ class Tree {
 
     let current = null;
     let queue = [];
-
+    
     queue.unshift(this.root);
 
     while (queue.length) {
 
       current = queue.pop();
+
       console.log(current.value);
 
       if (current.left) {
@@ -284,22 +336,22 @@ tree.root.left.right = new Node(20);
 tree.root.right = new Node(15);
 tree.root.right.right = new Node(25);
 
-console.log(tree.breadthFirstTraversal());
+// console.log(tree.breadthFirstTraversal());
 // console.log(tree.inOrder());
 // console.log(tree.postOrder());
 
 // tree.traverseWithStack();
 // tree.breadth();
 
-// const karyTree = new KaryTree(3);
+const karyTree = new KaryTree(3);
 
-// karyTree.root = new KaryNode(0, karyTree.k);
-// karyTree.root.children[0] = new KaryNode(1, karyTree.k);
-// karyTree.root.children[1] = new KaryNode(2, karyTree.k);
-// karyTree.root.children[2] = new KaryNode(3, karyTree.k);
-// karyTree.root.children[0].children[0] = new KaryNode(5, karyTree.k);
+karyTree.root = new KaryNode(5, karyTree.k);
+karyTree.root.children[0] = new KaryNode(1, karyTree.k);
+karyTree.root.children[1] = new KaryNode(2, karyTree.k);
+karyTree.root.children[2] = new KaryNode(3, karyTree.k);
+karyTree.root.children[0].children[0] = new KaryNode(10, karyTree.k);
 
-// karyTree.breadth();
+// console.log('this is kary breadth', karyTree.breadth());
 
 module.exports = {
   node: Node,

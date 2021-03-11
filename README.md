@@ -12,3 +12,4 @@
 - [fifo-animal-shelter](challenges/fifoAnimalShelter/fifo-animal-shelter.js)
 - [multi-bracket-validation](challenges/multiBracketValidation/multi-bracket-validation.js)
 - [trees](challenges/tree/tree.js)
+- [fizz-buzz-tree](challenges/fizzBuzzTree/fizz-buzz-tree.js)
