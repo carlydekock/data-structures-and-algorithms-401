@@ -1,8 +1,10 @@
 # Insertion Sort
 
-Insertion sort is a sorting algorithm for arrays which is based off of comparing an array value to the one prior. Insertion sort takes in an array of integers, and step by step sorts them into ascending order. 
+Insertion sort is a sorting algorithm for arrays which is based off of comparing an array value to the one prior. Insertion sort takes in an array of integers, and step by step sorts them into ascending order.
 
 This function uses a for loop, with a while loop inside. The for loop starts at i=1, up to i < arr.length. Inside of the for loop, j=i-1, and a temp variable is set to the arr[i]. Then, while j is a positive integer and the temp < arr[j] reassign the value in the array to the value prior, arr[j+1] becomes arr[j], and j=j-1. The loop will run until the temp value is no longer less than the value of arr[j] or until j is less than 0.
+
+## Steps
 
 The sample array is [8,4,23,42,16,15].
 
@@ -20,3 +22,7 @@ Step 5: On the fifth iteration, i=5, j=4, and temp=array[5]=15. Goes into the wh
 
 ![image1](assets/insertion1.png)
 ![image1](assets/insertion2.png)
+
+## Code
+
+Link to code [here](insertionSort.js)
