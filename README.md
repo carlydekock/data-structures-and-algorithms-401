@@ -15,3 +15,4 @@
 - [fizz-buzz-tree](challenges/fizzBuzzTree/fizz-buzz-tree.js)
 - [blog: insertion-sort](challenges/blogs/insertionSort/insertionSort.js)
 - [blog: merge-sort](challenges/blogs/mergeSort/mergeSort.js)
+- [blog: quick-sort](challenges/blogs/quickSort/quickSort.js)
