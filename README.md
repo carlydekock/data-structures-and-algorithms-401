@@ -17,3 +17,4 @@
 - [blog: merge-sort](challenges/blogs/mergeSort/mergeSort.js)
 - [blog: quick-sort](challenges/blogs/quickSort/quickSort.js)
 - [hashtables](challenges/hashtable/hashtable.js)
+- [repeated-word](challenges/repeatedWord/repeated-word.js)
