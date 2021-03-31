@@ -18,3 +18,4 @@
 - [blog: quick-sort](challenges/blogs/quickSort/quickSort.js)
 - [hashtables](challenges/hashtable/hashtable.js)
 - [repeated-word](challenges/repeatedWord/repeated-word.js)
+- [tree-intersection](challenges/treeIntersection/tree-intersection.js)
