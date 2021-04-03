@@ -20,3 +20,4 @@
 - [repeated-word](challenges/repeatedWord/repeated-word.js)
 - [tree-intersection](challenges/treeIntersection/tree-intersection.js)
 - [left-join](challenges/leftJoin/left-join.js)
+- [graph](challenges/graph/graph.js)
