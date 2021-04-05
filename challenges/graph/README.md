@@ -10,6 +10,7 @@ Implement Graphs and related methods.
 - getNodes(): returns all of the nodes in the graph as a collection (set, list, or similar)
 - getNeighbors(): returns collection of edges connected to the given node, takes in a given node, includes the weight of the connection in the returned collection
 - size(): returns the total number of nodes in the graph
+- Implement a breadth-first traversal on a graph
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
@@ -23,3 +24,4 @@ Implement Graphs and related methods.
 - Worked at lab table with Jason D, Jason Q, Nick M, and Bill
 - Testing for empty objects [article](https://flaviocopes.com/how-to-check-object-empty/)
 - Jest testing [docs](https://jest-bot.github.io/jest/docs/using-matchers.html)
+- Code Fellows docs on [graphs](https://codefellows.github.io/common_curriculum/data_structures_and_algorithms/Code_401/class-35/resources/graphs.html)
