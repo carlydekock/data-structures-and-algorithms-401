@@ -1,6 +1,7 @@
 # Graph Implementation
 <!-- Short summary or background information -->
 Implement Graphs and related methods.
+Implement getEdges function that returns true or false for whether a specified path through the graph is possible.
 
 ## Challenge
 <!-- Description of the challenge -->
@@ -11,6 +12,7 @@ Implement Graphs and related methods.
 - getNeighbors(): returns collection of edges connected to the given node, takes in a given node, includes the weight of the connection in the returned collection
 - size(): returns the total number of nodes in the graph
 - Implement a breadth-first traversal on a graph
+- Write a getEdge function, that takes in a graph and an array of city names. Return whether the full trip is possible with direct flights, and if so how much it would cost.
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
@@ -18,6 +20,7 @@ Implement Graphs and related methods.
 - Created methods for addVertex(vertex), addEdge(startVertex, endVertex, weight), getNeighbors(vertex)
 - Also created methods for both breadth first traversal as well as depth first traversal
 - Created size method that traverses the graph and returns the number of vertices
+- Created getEdges function that returns whether a direct path through the graph to specified vertices is possible
 
 ## Resources and Collaborators
 
