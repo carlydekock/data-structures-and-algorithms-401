@@ -134,36 +134,86 @@ class Graph {
   }
 }
 
-const test = new Graph();
 
-const one = new Vertex('one');
-const two = new Vertex('two');
-const three = new Vertex('three');
-const four = new Vertex('four');
-const five = new Vertex('five');
-const six = new Vertex('six');
+function getEdge (graph, array) {
 
-//just creating list - don't have any adjacencies yet
-test.addVertex(one);
-test.addVertex(two);
-test.addVertex(three);
-test.addVertex(four);
-test.addVertex(five);
-test.addVertex(six);
+  let total = 0;
 
-test.addEdge(one, three);
-test.addEdge(two, four);
-test.addEdge(one, four);
-test.addEdge(four, two);
-test.addEdge(four, five);
-test.addEdge(two, six);
+  loopOne: for(let i = 0; i < array.length - 1; i++) {
+    let neighbors = graph.getNeighbors(array[i]);
+
+    for(let j = 0; j < neighbors.length; j++){
+      let nextPlace = array[i + 1].value;
+      if(neighbors[j].vertex.value === nextPlace){
+        total += neighbors[j].weight;
+
+        continue loopOne;
+      }
+    }
+    return 'false, $0';
+
+  }
+  return `true, $${total}`;
+}
+
+
+// const test = new Graph();
+
+// const one = new Vertex('one');
+// const two = new Vertex('two');
+// const three = new Vertex('three');
+// const four = new Vertex('four');
+// const five = new Vertex('five');
+// const six = new Vertex('six');
+
+// //just creating list - don't have any adjacencies yet
+// test.addVertex(one);
+// test.addVertex(two);
+// test.addVertex(three);
+// test.addVertex(four);
+// test.addVertex(five);
+// test.addVertex(six);
+
+// test.addEdge(one, three);
+// test.addEdge(two, four);
+// test.addEdge(one, four);
+// test.addEdge(four, two);
+// test.addEdge(four, five);
+// test.addEdge(two, six);
 
 // console.log(test.breadthFirst(one));
 // console.log(test.depthFirst(one));
-// console.log(test.size(one));
+// console.log(test.getNeighbors(one));
+
+let test = new Graph();
+const pandora = new Vertex('Pandora');
+const arendelle = new Vertex('Arendelle');
+const metroville = new Vertex('Metroville');
+const monstroplolis = new Vertex('Monstroplolis');
+const narnia = new Vertex('Narnia');
+const naboo = new Vertex('Naboo');
+test.addVertex(pandora);
+test.addVertex(arendelle);
+test.addVertex(metroville);
+test.addVertex(monstroplolis);
+test.addVertex(narnia);
+test.addVertex(naboo);
+test.addEdge(pandora, arendelle, 150);
+test.addEdge(metroville, pandora, 82);
+test.addEdge(arendelle, metroville, 99);
+test.addEdge(arendelle, monstroplolis, 42);
+test.addEdge(metroville, monstroplolis, 105);
+test.addEdge(metroville, narnia, 37);
+test.addEdge(metroville, naboo, 26);
+test.addEdge(monstroplolis, naboo, 73);
+test.addEdge(narnia, naboo, 250);
+
+// console.log(getEdge(test, [metroville, pandora, arendelle]));
+
 
 module.exports = {
   Vertex,
   Edge,
   Graph,
+  getEdge,
 };
