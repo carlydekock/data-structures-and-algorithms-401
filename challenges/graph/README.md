@@ -2,6 +2,7 @@
 <!-- Short summary or background information -->
 Implement Graphs and related methods.
 Implement getEdges function that returns true or false for whether a specified path through the graph is possible.
+Implement depthFirst function to do preorder traversal on a graph.
 
 ## Challenge
 <!-- Description of the challenge -->
@@ -13,6 +14,7 @@ Implement getEdges function that returns true or false for whether a specified p
 - size(): returns the total number of nodes in the graph
 - Implement a breadth-first traversal on a graph
 - Write a getEdge function, that takes in a graph and an array of city names. Return whether the full trip is possible with direct flights, and if so how much it would cost.
+- Write a depthFirstTraversal function, that takes in a graph and a vertex. Return collection of nodes in their depth-first traversal order.
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
@@ -21,6 +23,7 @@ Implement getEdges function that returns true or false for whether a specified p
 - Also created methods for both breadth first traversal as well as depth first traversal
 - Created size method that traverses the graph and returns the number of vertices
 - Created getEdges function that returns whether a direct path through the graph to specified vertices is possible
+- Created depthFirstTraversal function that returns the nodes of the graph in order
 
 ## Resources and Collaborators
 
@@ -28,3 +31,4 @@ Implement getEdges function that returns true or false for whether a specified p
 - Testing for empty objects [article](https://flaviocopes.com/how-to-check-object-empty/)
 - Jest testing [docs](https://jest-bot.github.io/jest/docs/using-matchers.html)
 - Code Fellows docs on [graphs](https://codefellows.github.io/common_curriculum/data_structures_and_algorithms/Code_401/class-35/resources/graphs.html)
+- Array.from() docs from [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from)

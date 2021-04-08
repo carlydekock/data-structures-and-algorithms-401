@@ -134,7 +134,6 @@ class Graph {
   }
 }
 
-
 function getEdge (graph, array) {
 
   let total = 0;
@@ -156,6 +155,30 @@ function getEdge (graph, array) {
   return `true, $${total}`;
 }
 
+
+function depthFirstTraversal (graph, vertex) {
+  // const stack = [];
+  const visitedVertices = new Set();
+
+  // stack.push(vertex);
+  visitedVertices.add(vertex); // this could be a good opportunity for recursion as well
+
+  const traverse = (current, visited) => {
+    
+    visited.add(current);
+    
+    const neighbors = graph.getNeighbors(current);
+
+    for (let neighbor of neighbors) {
+      if(!visited.has(neighbor.vertex)){
+        traverse(neighbor.vertex, visited);
+      }
+    }
+  };
+
+  traverse(vertex, visitedVertices);
+  return visitedVertices;
+}
 
 // const test = new Graph();
 
@@ -210,10 +233,12 @@ test.addEdge(narnia, naboo, 250);
 
 // console.log(getEdge(test, [metroville, pandora, arendelle]));
 
+// console.log(depthFirstTraversal(test, pandora));
 
 module.exports = {
   Vertex,
   Edge,
   Graph,
   getEdge,
+  depthFirstTraversal,
 };
